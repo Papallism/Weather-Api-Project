@@ -47,7 +47,7 @@ namespace WeatherApiProject
             // 
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSearch.Location = new System.Drawing.Point(83, 111);
+            this.labelSearch.Location = new System.Drawing.Point(73, 113);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(69, 25);
             this.labelSearch.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace WeatherApiProject
             // 
             this.labelLocation.AutoSize = true;
             this.labelLocation.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLocation.Location = new System.Drawing.Point(83, 179);
+            this.labelLocation.Location = new System.Drawing.Point(73, 181);
             this.labelLocation.Name = "labelLocation";
             this.labelLocation.Size = new System.Drawing.Size(84, 25);
             this.labelLocation.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace WeatherApiProject
             // 
             this.labelLocalTime.AutoSize = true;
             this.labelLocalTime.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLocalTime.Location = new System.Drawing.Point(83, 247);
+            this.labelLocalTime.Location = new System.Drawing.Point(73, 249);
             this.labelLocalTime.Name = "labelLocalTime";
             this.labelLocalTime.Size = new System.Drawing.Size(102, 25);
             this.labelLocalTime.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace WeatherApiProject
             // 
             this.labelTemperature.AutoSize = true;
             this.labelTemperature.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTemperature.Location = new System.Drawing.Point(83, 315);
+            this.labelTemperature.Location = new System.Drawing.Point(73, 317);
             this.labelTemperature.Name = "labelTemperature";
             this.labelTemperature.Size = new System.Drawing.Size(118, 25);
             this.labelTemperature.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace WeatherApiProject
             // 
             this.labelLocationResult.AutoSize = true;
             this.labelLocationResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLocationResult.Location = new System.Drawing.Point(235, 181);
+            this.labelLocationResult.Location = new System.Drawing.Point(225, 183);
             this.labelLocationResult.Name = "labelLocationResult";
             this.labelLocationResult.Size = new System.Drawing.Size(136, 25);
             this.labelLocationResult.TabIndex = 4;
@@ -97,7 +97,7 @@ namespace WeatherApiProject
             // 
             this.labelLocalTimeResult.AutoSize = true;
             this.labelLocalTimeResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLocalTimeResult.Location = new System.Drawing.Point(235, 247);
+            this.labelLocalTimeResult.Location = new System.Drawing.Point(225, 249);
             this.labelLocalTimeResult.Name = "labelLocalTimeResult";
             this.labelLocalTimeResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelLocalTimeResult.Size = new System.Drawing.Size(154, 25);
@@ -108,7 +108,7 @@ namespace WeatherApiProject
             // 
             this.labelTemperatureResult.AutoSize = true;
             this.labelTemperatureResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTemperatureResult.Location = new System.Drawing.Point(235, 313);
+            this.labelTemperatureResult.Location = new System.Drawing.Point(225, 315);
             this.labelTemperatureResult.Name = "labelTemperatureResult";
             this.labelTemperatureResult.Size = new System.Drawing.Size(170, 25);
             this.labelTemperatureResult.TabIndex = 6;
@@ -117,7 +117,7 @@ namespace WeatherApiProject
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSearch.Location = new System.Drawing.Point(235, 107);
+            this.textBoxSearch.Location = new System.Drawing.Point(225, 109);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(213, 33);
             this.textBoxSearch.TabIndex = 7;
@@ -125,7 +125,7 @@ namespace WeatherApiProject
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSearch.Location = new System.Drawing.Point(489, 107);
+            this.buttonSearch.Location = new System.Drawing.Point(479, 109);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(104, 33);
             this.buttonSearch.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace WeatherApiProject
             // buttonSettings
             // 
             this.buttonSettings.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSettings.Location = new System.Drawing.Point(634, 107);
+            this.buttonSettings.Location = new System.Drawing.Point(624, 109);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(104, 33);
             this.buttonSettings.TabIndex = 9;
@@ -144,9 +144,9 @@ namespace WeatherApiProject
             // 
             // pictureBoxWeatherIcon
             // 
-            this.pictureBoxWeatherIcon.Location = new System.Drawing.Point(580, 231);
+            this.pictureBoxWeatherIcon.Location = new System.Drawing.Point(556, 249);
             this.pictureBoxWeatherIcon.Name = "pictureBoxWeatherIcon";
-            this.pictureBoxWeatherIcon.Size = new System.Drawing.Size(99, 88);
+            this.pictureBoxWeatherIcon.Size = new System.Drawing.Size(91, 91);
             this.pictureBoxWeatherIcon.TabIndex = 10;
             this.pictureBoxWeatherIcon.TabStop = false;
             // 
