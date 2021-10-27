@@ -52,7 +52,6 @@ namespace WeatherApiProject
             this.radioButtonCelcius.Name = "radioButtonCelcius";
             this.radioButtonCelcius.Size = new System.Drawing.Size(114, 29);
             this.radioButtonCelcius.TabIndex = 1;
-            this.radioButtonCelcius.TabStop = true;
             this.radioButtonCelcius.Text = "Celcius °C";
             this.radioButtonCelcius.UseVisualStyleBackColor = true;
             // 
@@ -64,7 +63,6 @@ namespace WeatherApiProject
             this.radioButtonFahrenheit.Name = "radioButtonFahrenheit";
             this.radioButtonFahrenheit.Size = new System.Drawing.Size(140, 29);
             this.radioButtonFahrenheit.TabIndex = 2;
-            this.radioButtonFahrenheit.TabStop = true;
             this.radioButtonFahrenheit.Text = "Fahrenheit °F";
             this.radioButtonFahrenheit.UseVisualStyleBackColor = true;
             // 

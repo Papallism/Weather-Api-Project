@@ -29,6 +29,7 @@ namespace WeatherApiProject
 
             using var client = new HttpClient();
             var response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<WeatherApiResponse>(responseString);
 
@@ -53,7 +54,26 @@ namespace WeatherApiProject
 
         private async void buttonSearch_Click(object sender, EventArgs e)
         {
-            await DisplayApiData();
+            if (textBoxSearch.Text != "")
+            {
+                try
+                {
+                    await DisplayApiData();
+                }
+                catch (HttpRequestException exc)
+                {
+                    MessageBox.Show(exc.Message, "Bad Request", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a location to search for", "Missing Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            settingsForm.ShowDialog();
         }
     }
 }
