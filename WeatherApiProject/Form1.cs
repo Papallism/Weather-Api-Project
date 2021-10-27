@@ -54,20 +54,27 @@ namespace WeatherApiProject
 
         private async void buttonSearch_Click(object sender, EventArgs e)
         {
-            if (textBoxSearch.Text != "")
+            if (!settingsForm.IsCelciusChecked && !settingsForm.IsFahrenheitChecked)
             {
-                try
-                {
-                    await DisplayApiData();
-                }
-                catch (HttpRequestException exc)
-                {
-                    MessageBox.Show(exc.Message, "Bad Request", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Please select your preferred unit in \"Settings\" first", "No unit selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Please enter a location to search for", "Missing Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (textBoxSearch.Text != "")
+                {
+                    try
+                    {
+                        await DisplayApiData();
+                    }
+                    catch (HttpRequestException exc)
+                    {
+                        MessageBox.Show(exc.Message, "Bad Request", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a location to search for", "Missing Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
