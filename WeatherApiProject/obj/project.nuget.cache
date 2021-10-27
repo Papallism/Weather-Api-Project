@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w9WN6gKttypL2Jujxo+Nh+Gw90R412fYnP7dgBDisXm3L/TlY2BSesZ0oyRGlPBh4+zMfXHYuZlHcEvJrmOWlQ==",
+  "dgSpecHash": "OdEuupknmNQrF+S6YFB3IjM0j6sYodHzaFkbv3p+lLPuhaZrJbhVouXcQopU4PoQ31CmVyZg2euBqmas2oaCdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mihal\\source\\repos\\WeatherApiProject\\WeatherApiProject\\WeatherApiProject.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mihal\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

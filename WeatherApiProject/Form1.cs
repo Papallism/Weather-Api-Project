@@ -12,6 +12,8 @@ namespace WeatherApiProject
 {
     public partial class Form1 : Form
     {
+        private const string API_KEY = "5aebfe36d655409b83b110227212510";
+
         public Form1()
         {
             InitializeComponent();
