@@ -146,9 +146,9 @@ namespace WeatherApiProject
             // 
             // pictureBoxWeatherIcon
             // 
-            this.pictureBoxWeatherIcon.Location = new System.Drawing.Point(556, 249);
+            this.pictureBoxWeatherIcon.Location = new System.Drawing.Point(510, 282);
             this.pictureBoxWeatherIcon.Name = "pictureBoxWeatherIcon";
-            this.pictureBoxWeatherIcon.Size = new System.Drawing.Size(91, 91);
+            this.pictureBoxWeatherIcon.Size = new System.Drawing.Size(90, 90);
             this.pictureBoxWeatherIcon.TabIndex = 10;
             this.pictureBoxWeatherIcon.TabStop = false;
             // 

@@ -50,6 +50,7 @@ namespace WeatherApiProject
             {
                 labelTemperatureResult.Text = $"{apiData.Current.TempFahrenheit} °F ({apiData.Current.Condition.Text})";
             }
+            pictureBoxWeatherIcon.ImageLocation = $"http:{apiData.Current.Condition.Icon}";
         }
 
         private async void buttonSearch_Click(object sender, EventArgs e)
