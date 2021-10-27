@@ -12,6 +12,22 @@ namespace WeatherApiProject
 {
     public partial class FormSettings : Form
     {
+        public bool IsCelciusChecked
+        {
+            get
+            {
+                return radioButtonCelcius.Checked;
+            }
+        }
+
+        public bool IsFahrenheitChecked
+        {
+            get
+            {
+                return radioButtonFahrenheit.Checked;
+            }
+        }
+
         public FormSettings()
         {
             InitializeComponent();

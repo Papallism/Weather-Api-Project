@@ -15,13 +15,14 @@ namespace WeatherApiProject
     public partial class Form1 : Form
     {
         private const string API_KEY = "5aebfe36d655409b83b110227212510";
+        private FormSettings settingsForm = new();
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        public async Task<WeatherApiResponse> GetWeatherData()
+        private async Task<WeatherApiResponse> GetWeatherData()
         {
             var location = textBoxSearch.Text;
             var url = $"http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={location}&aqi=no";
@@ -32,6 +33,27 @@ namespace WeatherApiProject
             var responseObject = JsonConvert.DeserializeObject<WeatherApiResponse>(responseString);
 
             return responseObject;
+        }
+
+        private async Task DisplayApiData()
+        {
+            var apiData = await GetWeatherData();
+
+            labelLocationResult.Text = $"{apiData.Location.Name} ({apiData.Location.Region}), {apiData.Location.Country}";
+            labelLocalTimeResult.Text = $"{apiData.Location.LocalTime}";
+            if (settingsForm.IsCelciusChecked)
+            {
+                labelTemperatureResult.Text = $"{apiData.Current.TempCelcius} °C ({apiData.Current.Condition.Text})";
+            }
+            else
+            {
+                labelTemperatureResult.Text = $"{apiData.Current.TempFahrenheit} °F ({apiData.Current.Condition.Text})";
+            }
+        }
+
+        private async void buttonSearch_Click(object sender, EventArgs e)
+        {
+            await DisplayApiData();
         }
     }
 }
