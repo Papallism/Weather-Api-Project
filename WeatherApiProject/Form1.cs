@@ -8,7 +8,9 @@ namespace WeatherApiProject
 {
     public partial class Form1 : Form
     {
+        // Top secret API key
         private const string API_KEY = "5aebfe36d655409b83b110227212510";
+
         private FormSettings settingsForm = new();
 
         public Form1()
