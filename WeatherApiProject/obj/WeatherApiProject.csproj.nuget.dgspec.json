@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mihal\\source\\repos\\WeatherApiProject\\WeatherApiProject\\WeatherApiProject.csproj": {}
+    "C:\\Users\\mihal\\Documents\\GitHub\\Weather-Api-Project\\WeatherApiProject\\WeatherApiProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mihal\\source\\repos\\WeatherApiProject\\WeatherApiProject\\WeatherApiProject.csproj": {
+    "C:\\Users\\mihal\\Documents\\GitHub\\Weather-Api-Project\\WeatherApiProject\\WeatherApiProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mihal\\source\\repos\\WeatherApiProject\\WeatherApiProject\\WeatherApiProject.csproj",
+        "projectUniqueName": "C:\\Users\\mihal\\Documents\\GitHub\\Weather-Api-Project\\WeatherApiProject\\WeatherApiProject.csproj",
         "projectName": "WeatherApiProject",
-        "projectPath": "C:\\Users\\mihal\\source\\repos\\WeatherApiProject\\WeatherApiProject\\WeatherApiProject.csproj",
+        "projectPath": "C:\\Users\\mihal\\Documents\\GitHub\\Weather-Api-Project\\WeatherApiProject\\WeatherApiProject.csproj",
         "packagesPath": "C:\\Users\\mihal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mihal\\source\\repos\\WeatherApiProject\\WeatherApiProject\\obj\\",
+        "outputPath": "C:\\Users\\mihal\\Documents\\GitHub\\Weather-Api-Project\\WeatherApiProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\mihal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -75,6 +75,7 @@ namespace WeatherApiProject
             this.Controls.Add(this.radioButtonCelcius);
             this.Controls.Add(this.label1);
             this.Name = "FormSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.ResumeLayout(false);
             this.PerformLayout();

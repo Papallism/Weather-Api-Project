@@ -169,6 +169,7 @@ namespace WeatherApiProject
             this.Controls.Add(this.labelLocation);
             this.Controls.Add(this.labelSearch);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather#";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWeatherIcon)).EndInit();
             this.ResumeLayout(false);
