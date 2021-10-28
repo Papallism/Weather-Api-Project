@@ -1,12 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,6 +16,7 @@ namespace WeatherApiProject
             InitializeComponent();
         }
 
+        // Function that calls the Weather API and gets the requested weather data
         private async Task<WeatherApiResponse> GetWeatherData()
         {
             var location = textBoxSearch.Text;
@@ -29,19 +24,29 @@ namespace WeatherApiProject
 
             using var client = new HttpClient();
             var response = await client.GetAsync(url);
-            response.EnsureSuccessStatusCode();
-            var responseString = await response.Content.ReadAsStringAsync();
-            var responseObject = JsonConvert.DeserializeObject<WeatherApiResponse>(responseString);
 
-            return responseObject;
+            // Ensure success of the call or else return null
+            if (response.IsSuccessStatusCode)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<WeatherApiResponse>(responseString);
+            }
+            else
+            {
+                MessageBox.Show($"Something went wrong! Error {response.StatusCode}",
+                                "Error");
+                return null;
+            }
         }
 
+        // Function to display the weather data
         private async Task DisplayApiData()
         {
             var apiData = await GetWeatherData();
 
             labelLocationResult.Text = $"{apiData.Location.Name} ({apiData.Location.Region}), {apiData.Location.Country}";
             labelLocalTimeResult.Text = $"{apiData.Location.LocalTime}";
+            // Display the temperature in the selected unit
             if (settingsForm.IsCelciusChecked)
             {
                 labelTemperatureResult.Text = $"{apiData.Current.TempCelcius} °C ({apiData.Current.Condition.Text})";
@@ -50,32 +55,46 @@ namespace WeatherApiProject
             {
                 labelTemperatureResult.Text = $"{apiData.Current.TempFahrenheit} °F ({apiData.Current.Condition.Text})";
             }
+            // Locate and display the weather icon
             pictureBoxWeatherIcon.ImageLocation = $"http:{apiData.Current.Condition.Icon}";
         }
 
+        // Function for clicking the "Search" button
         private async void buttonSearch_Click(object sender, EventArgs e)
         {
-            if (!settingsForm.IsCelciusChecked && !settingsForm.IsFahrenheitChecked)
+            // Ensure that the search text box is not empty
+            if (textBoxSearch.Text != "")
             {
-                MessageBox.Show("Please select your preferred unit in \"Settings\" first", "No unit selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (textBoxSearch.Text != "")
+                // Ensure that a preferred unit is selected in the settings form
+                if (!settingsForm.IsCelciusChecked && !settingsForm.IsFahrenheitChecked)
                 {
+                    MessageBox.Show("Please select your preferred unit in \"Settings\" first",
+                                    "No unit selected",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Handle calling and displaying the weather API data
                     try
                     {
                         await DisplayApiData();
                     }
-                    catch (HttpRequestException exc)
+                    catch (HttpRequestException)
                     {
-                        MessageBox.Show(exc.Message, "Bad Request", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Location not found",
+                                        "Bad Request",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Please enter a location to search for", "Missing Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a location to search for",
+                                "Missing Value",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
 

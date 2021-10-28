@@ -89,9 +89,8 @@ namespace WeatherApiProject
             this.labelLocationResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelLocationResult.Location = new System.Drawing.Point(225, 183);
             this.labelLocationResult.Name = "labelLocationResult";
-            this.labelLocationResult.Size = new System.Drawing.Size(136, 25);
+            this.labelLocationResult.Size = new System.Drawing.Size(0, 25);
             this.labelLocationResult.TabIndex = 4;
-            this.labelLocationResult.Text = "Location result";
             // 
             // labelLocalTimeResult
             // 
@@ -100,9 +99,8 @@ namespace WeatherApiProject
             this.labelLocalTimeResult.Location = new System.Drawing.Point(225, 249);
             this.labelLocalTimeResult.Name = "labelLocalTimeResult";
             this.labelLocalTimeResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelLocalTimeResult.Size = new System.Drawing.Size(154, 25);
+            this.labelLocalTimeResult.Size = new System.Drawing.Size(0, 25);
             this.labelLocalTimeResult.TabIndex = 5;
-            this.labelLocalTimeResult.Text = "Local Time result";
             // 
             // labelTemperatureResult
             // 
@@ -110,9 +108,8 @@ namespace WeatherApiProject
             this.labelTemperatureResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTemperatureResult.Location = new System.Drawing.Point(225, 315);
             this.labelTemperatureResult.Name = "labelTemperatureResult";
-            this.labelTemperatureResult.Size = new System.Drawing.Size(170, 25);
+            this.labelTemperatureResult.Size = new System.Drawing.Size(0, 25);
             this.labelTemperatureResult.TabIndex = 6;
-            this.labelTemperatureResult.Text = "Temperature result";
             // 
             // textBoxSearch
             // 
@@ -120,7 +117,7 @@ namespace WeatherApiProject
             this.textBoxSearch.Location = new System.Drawing.Point(225, 109);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(213, 33);
-            this.textBoxSearch.TabIndex = 7;
+            this.textBoxSearch.TabIndex = 1;
             // 
             // buttonSearch
             // 
@@ -128,8 +125,8 @@ namespace WeatherApiProject
             this.buttonSearch.Location = new System.Drawing.Point(479, 109);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(104, 33);
-            this.buttonSearch.TabIndex = 8;
-            this.buttonSearch.Text = "Search";
+            this.buttonSearch.TabIndex = 2;
+            this.buttonSearch.Text = "&Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
@@ -139,8 +136,8 @@ namespace WeatherApiProject
             this.buttonSettings.Location = new System.Drawing.Point(624, 109);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(104, 33);
-            this.buttonSettings.TabIndex = 9;
-            this.buttonSettings.Text = "Settings";
+            this.buttonSettings.TabIndex = 3;
+            this.buttonSettings.Text = "Se&ttings";
             this.buttonSettings.UseVisualStyleBackColor = true;
             this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
